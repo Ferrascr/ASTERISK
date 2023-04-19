@@ -32,7 +32,8 @@ same => n,Set(CDR(userfield)=${calldir}/out-${ARG1}-${ARG5}-${fecha}-${hora}-${A
 Agregar en 
 
    :etc/asterisk$ sudo vim route_out.conf
-
+   
+ 
 
 exten => _10xx,1,NoOp(RUTA INTERNA extensiones)
 
@@ -48,3 +49,12 @@ AGREGAR
   /etc/asterisk$ sudo vim extensions.conf 
   
 include => int
+
+
+Hacer esto
+
+/etc/asterisk$ sudo vim route_out.conf
+
+
+exten => _10XX,n,dial(SIP/${EXTEN}
+;exten => _10XX,n,playback(tt-monkeys
